@@ -2,7 +2,7 @@ import { ApolloServer } from 'apollo-server';
 import { GraphQLSchema } from 'graphql';
 import { makeExecutableSchema } from 'graphql-tools';
 import resolvers from './resolvers';
-import schema1 from './schemas';
+import schemas from './schemas';
 
 const options = {
   port: 9999,
@@ -10,7 +10,7 @@ const options = {
 };
 
 const schema: GraphQLSchema = makeExecutableSchema({
-  typeDefs: schema1,
+  typeDefs: schemas,
   resolvers,
 });
 
